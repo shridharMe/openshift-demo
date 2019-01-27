@@ -6,3 +6,11 @@ sudo sh /media/VBoxGuestAdditions/VBoxLinuxAdditions.run
 rm VBoxGuestAdditions_5.2.22.iso
 sudo umount /media/VBoxGuestAdditions
 sudo rmdir /media/VBoxGuestAdditions
+
+
+
+mkdir .ssh
+chmod 0700 .ssh
+cd .ssh/
+wget https://raw.githubusercontent.com/mitchellh/vagrant/master/keys/vagrant.pub -O authorized_keys
+chmod 0600 authorized_keys
